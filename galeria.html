@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria | Panel-Mont, Częstochowa</title>
+<meta name="description" content="Galeria realizacji Panel-Mont: dachy płaskie, membrana PVC, hydroizolacje, blacha na rąbek stojący i montaż płyt warstwowych w Częstochowie i regionie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#14181B',
+          ink2: '#0E1114',
+          steel: '#46545F',
+          steellight: '#8B98A1',
+          paper: '#ECEAE3',
+          panel: '#D8CBA6',
+          rust: '#C1571E',
+          rustdark: '#9C4416',
+          rustlight: '#E28245',
+        },
+        fontFamily: {
+          display: ['"Big Shoulders Display"', 'sans-serif'],
+          body: ['"Work Sans"', 'sans-serif'],
+          mono: ['"IBM Plex Mono"', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Work Sans', sans-serif; background-color: #ECEAE3; }
+  .font-display { font-family: 'Big Shoulders Display', sans-serif; }
+  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  ::selection { background-color: #C1571E; color: #fff; }
+
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .ease-spring { transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1); }
+
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  .img-tint::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(20,24,27,0.75), rgba(20,24,27,0.05) 55%);
+    mix-blend-mode: multiply;
+  }
+
+  .card-shadow { box-shadow: 0 1px 2px rgba(20,24,27,0.08), 0 12px 28px -8px rgba(20,24,27,0.22); }
+
+  #mobile-menu { transition: max-height 0.4s cubic-bezier(0.16,1,0.3,1), opacity 0.3s ease; }
+
+  #lightbox { transition: opacity 0.25s ease; }
+  #lightbox.hidden-lb { opacity: 0; pointer-events: none; }
+  #lightbox img { transition: opacity 0.15s ease; }
+</style>
+</head>
+<body class="bg-paper text-ink antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur-md border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html#top" class="font-display text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-none">
+        PANEL<span class="text-rust">-</span>MONT
+      </a>
+      <nav class="hidden lg:flex items-center gap-10 font-medium text-sm tracking-wide text-white/85">
+        <a href="uslugi.html" class="hover:text-rustlight transition-colors duration-200">Usługi</a>
+        <a href="galeria.html" class="text-rustlight">Galeria</a>
+        <a href="index.html#o-firmie" class="hover:text-rustlight transition-colors duration-200">O firmie</a>
+        <a href="index.html#kontakt" class="hover:text-rustlight transition-colors duration-200">Kontakt</a>
+      </nav>
+      <a href="tel:600402119" class="hidden lg:inline-flex items-center gap-2 bg-rust hover:bg-rustdark text-white text-sm font-semibold px-5 py-2.5 transition-[background-color,transform] duration-200 ease-spring hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rustlight active:translate-y-0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        600 402 119
+      </a>
+      <button id="menu-btn" class="lg:hidden text-white p-2" aria-label="Otwórz menu" aria-expanded="false">
+        <svg id="menu-icon-open" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg id="menu-icon-close" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="lg:hidden overflow-hidden max-h-0 opacity-0 bg-ink border-t border-white/5">
+    <nav class="flex flex-col px-6 py-6 gap-5 font-medium text-white/90">
+      <a href="uslugi.html" class="hover:text-rustlight transition-colors duration-200">Usługi</a>
+      <a href="galeria.html" class="text-rustlight">Galeria</a>
+      <a href="index.html#o-firmie" class="hover:text-rustlight transition-colors duration-200">O firmie</a>
+      <a href="index.html#kontakt" class="hover:text-rustlight transition-colors duration-200">Kontakt</a>
+      <a href="tel:600402119" class="inline-flex items-center justify-center gap-2 bg-rust text-white font-semibold px-5 py-3 mt-2">600 402 119</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="relative bg-ink pt-40 pb-20 overflow-hidden">
+  <svg class="absolute inset-0 w-full h-full opacity-[0.06]" viewBox="0 0 800 800" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <pattern id="panelProfileBg" width="80" height="40" patternUnits="userSpaceOnUse">
+        <path d="M0,0 L20,0 L30,24 L50,24 L60,0 L80,0" fill="none" stroke="#E28245" stroke-width="1.5"/>
+      </pattern>
+    </defs>
+    <rect width="800" height="800" fill="url(#panelProfileBg)"/>
+  </svg>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10">
+    <h1 class="font-display font-extrabold uppercase text-white leading-[0.92] text-5xl sm:text-6xl md:text-7xl tracking-tight max-w-3xl">Galeria</h1>
+    <p class="mt-6 text-white/75 text-lg md:text-xl max-w-2xl leading-relaxed">
+      Zdjęcia prosto z budów: dachy płaskie domów, budynków wielorodzinnych i obiektów gospodarczych w Częstochowie i regionie.
+    </p>
+  </div>
+</section>
+
+<!-- ============ GALLERY GRID ============ -->
+<section class="bg-paper py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5" id="gallery-grid">
+
+      <!-- items injected via markup below -->
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="0">
+        <img src="images/1.webp" alt="Dach płaski, membrana PVC" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach płaski, membrana PVC</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="1">
+        <img src="images/2.webp" alt="Dach płaski po realizacji" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach płaski po realizacji</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="2">
+        <img src="images/3.webp" alt="Ekipa Panel-Mont przy pracy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Ekipa Panel-Mont przy pracy</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="3">
+        <img src="images/4.webp" alt="Pokrycie dachu płaskiego membraną PVC" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Pokrycie dachu płaskiego membraną PVC</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="4">
+        <img src="images/5.webp" alt="Dach żwirowy, obsługa klimatyzacji" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach żwirowy, obsługa klimatyzacji</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="5">
+        <img src="images/6.webp" alt="Obróbka komina na dachu płaskim" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Obróbka komina na dachu płaskim</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="6">
+        <img src="images/7.webp" alt="Obróbka okapu, dach płaski" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Obróbka okapu, dach płaski</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="7">
+        <img src="images/8.webp" alt="Dach żwirowy ze świetlikami" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach żwirowy ze świetlikami</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="8">
+        <img src="images/9.webp" alt="Izolacja i pokrycie dachu obiektu handlowego" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Izolacja i pokrycie dachu obiektu handlowego</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="9">
+        <img src="images/10.webp" alt="Izolacja termiczna dachu płaskiego" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Izolacja termiczna dachu płaskiego</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="10">
+        <img src="images/11.webp" alt="Dach płaski, membrana PVC" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach płaski, membrana PVC</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="11">
+        <img src="images/12.webp" alt="Dach płaski budynku wielorodzinnego" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach płaski budynku wielorodzinnego</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="12">
+        <img src="images/13.webp" alt="Dach płaski po pokryciu membraną" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach płaski po pokryciu membraną</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="13">
+        <img src="images/14.webp" alt="Membrana PVC, dach płaski" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Membrana PVC, dach płaski</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="14">
+        <img src="images/15.webp" alt="Dach żwirowy ze świetlikami, zmierzch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach żwirowy ze świetlikami, zmierzch</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="15">
+        <img src="images/16.webp" alt="Przegląd i konserwacja dachu płaskiego" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Przegląd i konserwacja dachu płaskiego</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="16">
+        <img src="images/17.webp" alt="Świeżo wykonane przejścia dachowe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Świeżo wykonane przejścia dachowe</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="17">
+        <img src="images/18.webp" alt="Dach płaski, obróbki kominów" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Dach płaski, obróbki kominów</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="18">
+        <img src="images/19.webp" alt="Pokrycie blachą na rąbek stojący" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Pokrycie blachą na rąbek stojący</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="19">
+        <img src="images/20.webp" alt="Membrana PVC, dach płaski" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Membrana PVC, dach płaski</p>
+      </button>
+      <button type="button" class="gallery-item reveal group relative aspect-[4/3] overflow-hidden card-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-rust" data-index="20">
+        <img src="images/21.webp" alt="Montaż elewacji z płyt warstwowych" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-spring group-hover:scale-105">
+        <div class="absolute inset-0 img-tint opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <p class="absolute bottom-3 left-3 right-3 text-left text-white font-medium text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">Montaż elewacji z płyt warstwowych</p>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="relative bg-ink py-20 md:py-28 overflow-hidden">
+  <svg class="absolute inset-0 w-full h-full opacity-[0.05]" viewBox="0 0 800 800" preserveAspectRatio="none" aria-hidden="true">
+    <rect width="800" height="800" fill="url(#panelProfileBg)"/>
+  </svg>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+    <div class="reveal max-w-xl">
+      <h2 class="font-display font-extrabold uppercase text-3xl md:text-5xl leading-[0.95] tracking-tight text-white">Potrzebujesz wyceny dachu?</h2>
+      <p class="mt-4 text-white/70 text-lg">Zadzwoń albo napisz, opisz obiekt, a przygotujemy wycenę dopasowaną do zakresu prac.</p>
+    </div>
+    <div class="reveal flex flex-wrap gap-4">
+      <a href="tel:600402119" class="inline-flex items-center gap-2 bg-rust hover:bg-rustdark text-white font-semibold px-7 py-4 transition-[background-color,transform] duration-200 ease-spring hover:-translate-y-0.5 card-shadow-rust focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rustlight active:translate-y-0">
+        600 402 119
+      </a>
+      <a href="index.html#kontakt" class="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold px-7 py-4 transition-[border-color,transform] duration-200 ease-spring hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:translate-y-0">
+        Formularz kontaktowy
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink2 text-white/70 py-14">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid md:grid-cols-3 gap-10 items-start">
+      <div>
+        <a href="index.html#top" class="font-display text-2xl font-extrabold text-white tracking-tight">PANEL<span class="text-rust">-</span>MONT</a>
+        <p class="mt-3 text-sm max-w-xs">Pokrycia dachów płaskich, membrana PVC, papa termozgrzewalna i hydroizolacje. Częstochowa i region.</p>
+      </div>
+      <nav class="flex flex-col gap-2 text-sm">
+        <a href="uslugi.html" class="hover:text-rustlight transition-colors duration-200 w-fit">Usługi</a>
+        <a href="galeria.html" class="hover:text-rustlight transition-colors duration-200 w-fit">Galeria</a>
+        <a href="index.html#o-firmie" class="hover:text-rustlight transition-colors duration-200 w-fit">O firmie</a>
+        <a href="index.html#kontakt" class="hover:text-rustlight transition-colors duration-200 w-fit">Kontakt</a>
+      </nav>
+      <div class="font-mono text-xs leading-relaxed space-y-1">
+        <p>Przemysław Benduch Panel-Mont</p>
+        <p>ul. Gościnna 68, 42-271 Częstochowa</p>
+        <p>tel. 600 402 119 · warstwoweplyty@o2.pl</p>
+        <p>NIP 9491628906 · REGON 241917341</p>
+      </div>
+    </div>
+    <div class="mt-10 pt-6 border-t border-white/10 text-xs text-white/40 flex flex-col sm:flex-row justify-between gap-2">
+      <p>&copy; <span id="year"></span> Panel-Mont Przemysław Benduch. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="hidden-lb fixed inset-0 z-[60] flex items-center justify-center bg-ink/95 p-4 md:p-10" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+  <button id="lightbox-close" type="button" aria-label="Zamknij podgląd" class="absolute top-5 right-5 md:top-8 md:right-8 text-white/80 hover:text-white p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rustlight">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button id="lightbox-prev" type="button" aria-label="Poprzednie zdjęcie" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rustlight">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button id="lightbox-next" type="button" aria-label="Następne zdjęcie" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-rustlight">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <figure class="max-w-5xl max-h-full flex flex-col items-center">
+    <img id="lightbox-img" src="" alt="" class="max-h-[75vh] max-w-full object-contain card-shadow">
+    <figcaption id="lightbox-caption" class="mt-4 text-white/80 font-mono text-sm text-center"></figcaption>
+  </figure>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== '0px';
+    if (isOpen) {
+      menu.style.maxHeight = '0px';
+      menu.style.opacity = '0';
+    } else {
+      menu.style.maxHeight = menu.scrollHeight + 'px';
+      menu.style.opacity = '1';
+    }
+    iconOpen.classList.toggle('hidden');
+    iconClose.classList.toggle('hidden');
+    menuBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.style.maxHeight = '0px';
+    menu.style.opacity = '0';
+    iconOpen.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  }));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const items = Array.from(document.querySelectorAll('.gallery-item'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  let currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = index;
+    updateLightbox();
+    lightbox.classList.remove('hidden-lb');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.add('hidden-lb');
+    document.body.style.overflow = '';
+  }
+  function updateLightbox() {
+    const item = items[currentIndex];
+    const img = item.querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = img.alt;
+  }
+  function showNext() { currentIndex = (currentIndex + 1) % items.length; updateLightbox(); }
+  function showPrev() { currentIndex = (currentIndex - 1 + items.length) % items.length; updateLightbox(); }
+
+  items.forEach((item, index) => item.addEventListener('click', () => openLightbox(index)));
+  document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+  document.getElementById('lightbox-next').addEventListener('click', showNext);
+  document.getElementById('lightbox-prev').addEventListener('click', showPrev);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden-lb')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
+  });
+</script>
+</body>
+</html>
